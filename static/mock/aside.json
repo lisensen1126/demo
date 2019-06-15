@@ -1,0 +1,71 @@
+{
+    "result": {
+        "data": "from local data",
+        "menuList": [
+            {
+                "entity": {
+                    "id": "1",
+                    "menuName": "网站介绍",
+                    "iconClass": "el-icon-s-cooperation",
+                    "rouer": "/home/222"
+                }
+            },
+            {
+                "entity": {
+                    "id": "2",
+                    "menuName": "vue",
+                    "iconClass": "el-icon-location",
+                    "rouer": "/home/222"
+                },
+                "childs": [
+                    {
+                        "entity": {
+                            "id": "2-1",
+                            "menuName": "vuex",
+                            "router": "/home/222"
+                        }
+                    },
+                    {
+                        "entity": {
+                            "id": "2-2",
+                            "menuName": "vue-router",
+                            "router": "/vuex/333"
+                        }
+                    }
+                ]
+            },
+            {
+                "entity": {
+                    "id": "3",
+                    "menuName": "element-ui",
+                    "iconClass": "el-icon-s-home",
+                    "rouer": "/vuex/333"
+                }
+            },
+            {
+                "entity": {
+                    "id": "4",
+                    "menuName": "HTTPservice",
+                    "iconClass": "el-icon-mouse",
+                    "rouer": "/home/222"
+                },
+                "childs": [
+                    {
+                        "entity": {
+                            "id": "4-1",
+                            "menuName": "ajax",
+                            "router": "/home/222"
+                        }
+                    },
+                    {
+                        "entity": {
+                            "id": "4-2",
+                            "menuName": "axios",
+                            "router": "/vuex/333"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
