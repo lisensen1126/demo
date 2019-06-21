@@ -2,7 +2,7 @@
   <div class="i18n"
        @click='flag'>
     中英切换
-    <div>{{$t('message.hello')}}</div>
+    <div>{{$t('hello')}}</div>
     <el-date-picker v-model="value1"
                     type="date"
                     placeholder="选择日期">

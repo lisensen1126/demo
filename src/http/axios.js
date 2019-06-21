@@ -1,7 +1,17 @@
-import Axios from 'axios'
-import { Loading } from 'element-ui'
+import axios from 'axios'
+import {
+  Loading
+} from 'element-ui'
 let loadingInstance
-Axios.interceptors.request.use(function (config) {
+// 自动切换环境
+if (process.env.NODE_ENV === 'development') {
+  axios.defaults.baseURL = '/api'
+} else if (process.env.NODE_ENV === 'debug') {
+  axios.defaults.baseURL = '/api'
+} else if (process.env.NODE_ENV === 'production') {
+  axios.defaults.baseURL = 'http://baidu/'
+}
+axios.interceptors.request.use(function (config) {
   loadingInstance = Loading.service({
     lock: true,
     text: '请求资源中……',
@@ -13,8 +23,8 @@ Axios.interceptors.request.use(function (config) {
   return config
 })
 // 定义一个响应拦截器
-Axios.interceptors.response.use(function (config) {
+axios.interceptors.response.use(function (config) {
   loadingInstance.close()
   return config
 })
-export default Axios
+export default axios

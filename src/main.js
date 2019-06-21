@@ -21,11 +21,14 @@ Vue.use(store)
 
 Vue.prototype.axios = axios
 /* eslint-disable no-new */
-new Vue({
+var vm = new Vue({
   el: '#app',
   router,
   store,
   i18n,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })
+console.log(vm.$i18n)

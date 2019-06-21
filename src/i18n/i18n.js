@@ -12,7 +12,7 @@ const messages = {
   zh: Object.assign(zh, zhLocale)
 }
 const i18n = new VueI18n({
-  locale: 'en',
+  locale: 'zh',
   messages
 })
 

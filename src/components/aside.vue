@@ -34,7 +34,7 @@ export default {
     }
   },
   mounted () {
-    this.axios.get('api/aside.json').then((res) => { console.log(res); this.menuList = res.data.result.menuList })
+    this.axios.get('/aside.json').then((res) => { console.log(res); this.menuList = res.data.result.menuList })
   },
   computed: {
   },
